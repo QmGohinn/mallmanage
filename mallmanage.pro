@@ -22,15 +22,20 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 FORMS += \
     _APL/LoginUI/loginui.ui \
-    _APL/MainForm/mallmanagemainform.ui
+    _APL/MainForm/mallmanagemainform.ui \
+    _APL/UserAdd/useradddlg.ui
 
 HEADERS += \
     _APL/LoginUI/loginui.h \
     _APL/MainForm/mallmanagemainform.h \
+    _APL/UserAdd/useradddlg.h \
+    _BK/GoodsClass.h \
     _BK/mallGlobal.h
 
 SOURCES += \
     _APL/LoginUI/loginui.cpp \
     _APL/MainForm/mallmanagemainform.cpp \
+    _APL/UserAdd/useradddlg.cpp \
+    _BK/GoodsClass.cpp \
     _BK/main.cpp \
     _BK/mallGlobal.cpp

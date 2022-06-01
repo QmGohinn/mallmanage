@@ -9,8 +9,8 @@ loginUI::loginUI(QWidget *parent) :
     ui(new Ui::loginUI)
 {
     ui->setupUi(this);
-    ui->lineEdit->setText("admin");
-    ui->lineEdit_2->setText("123456");
+//    ui->lineEdit->setText("admin");
+//    ui->lineEdit_2->setText("123456");
 }
 
 loginUI::~loginUI()
@@ -49,4 +49,13 @@ void loginUI::on_pushButton_clicked()
             return;
         }
     }
+}
+
+void loginUI::on_pushButton_3_clicked()
+{
+    if(m_useraddDlg == nullptr){
+        m_useraddDlg = new UserAddDlg;
+    }
+
+    m_useraddDlg->exec();
 }

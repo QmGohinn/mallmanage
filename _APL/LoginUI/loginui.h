@@ -2,6 +2,7 @@
 #define LOGINUI_H
 
 #include <QDialog>
+#include <_APL/UserAdd/useradddlg.h>
 
 namespace Ui {
 class loginUI;
@@ -15,10 +16,13 @@ public:
     explicit loginUI(QWidget *parent = nullptr);
     ~loginUI();
 
+    UserAddDlg* m_useraddDlg = nullptr;
+
 private slots:
     void on_pushButton_2_clicked();
-
     void on_pushButton_clicked();
+
+    void on_pushButton_3_clicked();
 
 private:
     Ui::loginUI *ui;

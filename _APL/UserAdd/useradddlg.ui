@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UserAddDlg</class>
+ <widget class="QDialog" name="UserAddDlg">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>218</width>
+    <height>146</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>218</width>
+    <height>146</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>218</width>
+    <height>146</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>宋体</family>
+    <pointsize>10</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>注 册</string>
+  </property>
+  <widget class="QWidget" name="formLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>201</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="formLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>管理员:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="lineEdit"/>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>口 令:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="lineEdit_2">
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>口令再次:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLineEdit" name="lineEdit_3">
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="horizontalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>110</y>
+     <width>201</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QPushButton" name="pushButton">
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="text">
+       <string>注 册</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="text">
+       <string>返 回</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
