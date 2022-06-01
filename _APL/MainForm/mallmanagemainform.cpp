@@ -62,6 +62,17 @@ void mallmanageMainForm::updateCombox()
     }
 }
 
+void mallmanageMainForm::updateTable()
+{
+    while (ui->tableWidget->rowCount()) {
+        ui->tableWidget->removeRow(0);
+    }
+
+    for(auto& _it : mallGloval::g_currentGood){
+        GoodsIntoTable(_it);
+    }
+}
+
 
 void mallmanageMainForm::on_pushButton_clicked()
 {
@@ -106,10 +117,14 @@ void mallmanageMainForm::on_pushButton_2_clicked()
         ui->tableWidget->removeRow(0);
     }
 
+    ui->spinBox_2->setValue(0);
+    ui->lineEdit_7->clear();
+
     mallGloval::g_currentGood.clear();
     mallGloval::g_eatGood.clear();
     mallGloval::g_clothGood.clear();
     mallGloval::g_phoneGood.clear();
+    updateCombox();
 }
 
 void mallmanageMainForm::on_comboBox_2_currentIndexChanged(int index)
@@ -158,7 +173,7 @@ void mallmanageMainForm::on_spinBox_2_textChanged(const QString &arg1)
     ui->lineEdit_7->setText(QString("%1").arg(ui->lineEdit_4->text().toFloat() * ui->spinBox_2->text().toInt()));
     return;
 }
-
+#include <QDebug>
 void mallmanageMainForm::on_pushButton_3_clicked()
 {
     if(ui->spinBox_2->text().compare("0") == 0){
@@ -176,7 +191,15 @@ void mallmanageMainForm::on_pushButton_3_clicked()
     mallGloval::g_sellTotal += ui->lineEdit_7->text().toFloat();
     ui->textEdit->setText(ui->textEdit->toPlainText() + _str);
 
-
+    for(auto &_it : mallGloval::g_currentGood){
+        if(_it.m_name.compare(ui->comboBox_3->currentText()) == 0){
+            _it.m_num = _it.m_num - ui->spinBox_2->value();
+            ui->lineEdit_5->setText(QString("%1").arg(_it.m_num));
+            ui->spinBox_2->setValue(0);
+            ui->lineEdit_7->clear();
+        }
+    }
+    updateTable();
     ui->pushButton_4->setEnabled(true);
 }
 

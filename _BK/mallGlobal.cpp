@@ -12,7 +12,7 @@ float mallGloval::g_sellTotal = 0;
 
 void mallGloval::sysInit()
 {
-//    g_userPWD.insert("admin", "123456");
+    g_userPWD.insert("admin", "123456");
 
     Goods _phone("HUAWEI P40", 4000, 5400, 200);
     Goods _cloth("时尚女装", 200, 600, 130);

@@ -9,8 +9,8 @@ loginUI::loginUI(QWidget *parent) :
     ui(new Ui::loginUI)
 {
     ui->setupUi(this);
-//    ui->lineEdit->setText("admin");
-//    ui->lineEdit_2->setText("123456");
+    ui->lineEdit->setText("admin");
+    ui->lineEdit_2->setText("123456");
 }
 
 loginUI::~loginUI()

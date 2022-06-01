@@ -18,6 +18,7 @@ public:
 
     void GoodsIntoTable(Goods _good);
     void updateCombox();
+    void updateTable();
 
 private slots:
     void on_pushButton_clicked();
@@ -26,7 +27,6 @@ private slots:
     void on_comboBox_3_currentTextChanged(const QString &arg1);
     void on_spinBox_2_textChanged(const QString &arg1);
     void on_pushButton_3_clicked();
-
     void on_pushButton_4_clicked();
 
 private:
